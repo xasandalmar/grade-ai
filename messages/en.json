@@ -1,0 +1,368 @@
+{
+  "meta": {
+    "title": "Grade AI — AI Exam Analysis Platform",
+    "description": "Upload exam results, get instant analysis, and ask AI about your school's performance."
+  },
+  "nav": {
+    "home": "Home",
+    "signIn": "Sign in",
+    "getStarted": "Get started",
+    "dashboard": "Dashboard"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggle": "Toggle theme"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "home": {
+    "badge": "AI-powered exam analysis",
+    "title": "Understand your school's exam results in minutes, not days",
+    "subtitle": "Upload an Excel sheet of results and Grade AI validates it, calculates every statistic, and writes a clear report — in English, Somali, or Arabic.",
+    "ctaPrimary": "Get started",
+    "ctaSecondary": "Sign in",
+    "featuresTitle": "Everything a school needs from exam results",
+    "features": {
+      "excel": {
+        "title": "Excel upload",
+        "description": "Upload .xlsx, .xls, or .csv results. Every row is validated before anything is saved — marks are never silently changed."
+      },
+      "analysis": {
+        "title": "Automatic analysis",
+        "description": "Totals, averages, ranks, pass rates, and strongest/weakest subjects — calculated by the database, not guessed by AI."
+      },
+      "aiReports": {
+        "title": "AI-written reports",
+        "description": "Executive summaries, recommendations, and insights generated from your verified data, downloadable as PDF."
+      },
+      "assistant": {
+        "title": "AI assistant",
+        "description": "Ask \"who are the top 10 students?\" or \"generate a report for Ahmed Ali\" and get an answer grounded in your school's real data."
+      },
+      "languages": {
+        "title": "English, Somali, Arabic",
+        "description": "Every report and the entire interface works in all three languages, with full right-to-left support for Arabic."
+      },
+      "security": {
+        "title": "Your data stays yours",
+        "description": "Row-level security ensures one school can never see another school's students, exams, or reports."
+      }
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "auth": {
+    "fullNameLabel": "Full name",
+    "emailLabel": "Email address",
+    "passwordLabel": "Password",
+    "passwordHint": "At least 8 characters.",
+    "newPasswordLabel": "New password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Start analyzing your school's exam results in minutes.",
+      "submit": "Create account",
+      "submitPending": "Creating account…",
+      "haveAccount": "Already have an account?",
+      "signInLink": "Sign in",
+      "checkEmailTitle": "Check your email",
+      "checkEmailBody": "We've sent a confirmation link to your email address. Click it to activate your account."
+    },
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to your Grade AI account.",
+      "submit": "Sign in",
+      "submitPending": "Signing in…",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Create one"
+    },
+    "forgotPassword": {
+      "title": "Reset your password",
+      "subtitle": "Enter your email and we'll send you a reset link.",
+      "submit": "Send reset link",
+      "submitPending": "Sending…",
+      "successTitle": "Check your email",
+      "successBody": "If an account exists for that address, a password reset link is on its way.",
+      "backToLogin": "Back to sign in"
+    },
+    "resetPassword": {
+      "title": "Choose a new password",
+      "subtitle": "Enter a new password for your account.",
+      "submit": "Update password",
+      "submitPending": "Updating…",
+      "successTitle": "Password updated",
+      "successBody": "Your password has been changed successfully.",
+      "goToDashboard": "Go to dashboard"
+    },
+    "signOut": "Sign out",
+    "errors": {
+      "invalid_credentials": "Incorrect email or password.",
+      "user_already_exists": "An account with this email already exists.",
+      "email_not_confirmed": "Please confirm your email address before signing in.",
+      "weak_password": "That password doesn't meet the requirements.",
+      "rate_limited": "Too many attempts. Please try again in a moment.",
+      "session_expired": "Your session has expired. Please request a new reset link.",
+      "duplicate": "That name is already in use.",
+      "account_suspended": "Your account has been suspended or deactivated. Contact your administrator for help.",
+      "unexpected": "Something went wrong. Please try again."
+    }
+  },
+  "onboarding": {
+    "title": "Set up your school",
+    "subtitle": "Tell us about your school to get started. You can update this later.",
+    "nameLabel": "School name",
+    "addressLabel": "Address (optional)",
+    "phoneLabel": "Phone (optional)",
+    "submit": "Create school",
+    "submitPending": "Creating…"
+  },
+  "nav_sections": {
+    "dashboard": "Dashboard",
+    "school": "School",
+    "exams": "Exams",
+    "admin": "Admin"
+  },
+  "school": {
+    "title": "School settings",
+    "subtitle": "Manage your school's basic information.",
+    "nameLabel": "School name",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "saved": "Saved."
+  },
+  "exams": {
+    "title": "Exams",
+    "subtitle": "Upload exam results and view automated reports.",
+    "uploadNew": "Upload exam",
+    "studentsStat": "Students",
+    "empty": "No exams yet. Upload your first result file to get started.",
+    "delete": "Delete",
+    "confirmDelete": "Delete this exam and its report?",
+    "status": {
+      "uploaded": "Uploaded",
+      "analyzed": "Analyzed",
+      "failed": "Failed"
+    }
+  },
+  "upload": {
+    "title": "Upload exam results",
+    "subtitle": "Upload an Excel or CSV file. We'll validate every row before anything is saved.",
+    "examTitleLabel": "Exam title",
+    "examTitlePlaceholder": "e.g. Midterm Exam",
+    "classNameLabel": "Class",
+    "classNamePlaceholder": "e.g. Grade 8",
+    "examDateLabel": "Exam date (optional)",
+    "maxMarkLabel": "Max mark per subject",
+    "fileLabel": "Result file (.xlsx, .xls, .csv)",
+    "fileHint": "We automatically find the header row even if your file has a title or term info above it, and understand per-subject CAT1/CAT2/Final/Total columns.",
+    "parse": "Preview file",
+    "parsing": "Reading file…",
+    "previewTitle": "Preview",
+    "previewSubtitle": "Nothing is saved yet — review the rows below.",
+    "rowsWithErrors": "{count, plural, one {# row needs fixing} other {# rows need fixing}} before you can save. Fix your file and upload again.",
+    "rowsOk": "All {count, plural, one {# row looks} other {# rows look}} good.",
+    "chooseDifferentFile": "Choose a different file",
+    "confirm": "Confirm & save",
+    "confirming": "Saving…",
+    "colRow": "#",
+    "colStudentId": "Student ID",
+    "colStudentName": "Student Name",
+    "fileErrors": {
+      "unreadable_file": "We couldn't read that file. Make sure it's a valid .xlsx, .xls, or .csv file.",
+      "no_rows": "The file doesn't contain any data rows.",
+      "ai_unavailable": "AI analysis isn't configured on this server, so files can't be processed right now.",
+      "ai_analysis_failed": "We couldn't make sense of this file's contents. Double-check it has student names and marks, then try again.",
+      "rows_omitted": "The analysis didn't come back with all of your students — this can happen on very large files. Please try again, or split the file into smaller batches."
+    },
+    "rowErrors": {
+      "missing_name": "Missing student name",
+      "duplicate_student": "Duplicate student in this file"
+    },
+    "cellErrors": {
+      "invalid_mark": "Not a valid mark",
+      "mark_above_max": "Above the max mark"
+    },
+    "errors": {
+      "no_file": "Please choose a file to upload.",
+      "invalid_file_type": "Please upload a .xlsx, .xls, or .csv file.",
+      "file_too_large": "That file is too large (max 8MB).",
+      "unexpected": "Something went wrong while saving. Please try again."
+    }
+  },
+  "report": {
+    "backToExams": "Back to exams",
+    "summaryTitle": "Summary",
+    "studentCount": "Students",
+    "subjectCount": "Subjects",
+    "classAverage": "Class average",
+    "passRate": "Pass rate",
+    "failRate": "Fail rate",
+    "subjectsTitle": "Subject breakdown",
+    "subjectCol": "Subject",
+    "averageCol": "Average",
+    "highestCol": "Highest",
+    "lowestCol": "Lowest",
+    "passRateCol": "Pass rate",
+    "studentsTitle": "Student rankings",
+    "rankCol": "Rank",
+    "nameCol": "Name",
+    "codeCol": "ID",
+    "totalCol": "Total",
+    "percentageCol": "%",
+    "gradeCol": "Grade",
+    "strongestCol": "Strongest",
+    "weakestCol": "Weakest",
+    "aiSummaryPending": "AI-written summary and recommendations will appear here once the OpenAI integration is connected.",
+    "notFound": "Report not found.",
+    "downloadPdf": "Download PDF",
+    "print": "Print",
+    "emailReport": "Email report again",
+    "emailReportSent": "Email sent",
+    "emailReportError": "Couldn't send — try again",
+    "outOf": "{total} / {max}",
+    "dataIntegrityTitle": "Data integrity alerts",
+    "dataIntegrityNone": "No missing marks — every student has a recorded result for every subject.",
+    "dataIntegrityMissing": "Missing:",
+    "topPerformersTitle": "Top performers",
+    "strugglingStudentsTitle": "Students needing attention",
+    "gradeDistributionTitle": "Grade distribution",
+    "termTrendsTitle": "Term-by-term trends (CAT1 → CAT2 → Final)",
+    "noTermData": "This exam's file didn't include separate CAT1/CAT2/Final columns, so no term-by-term trend is available — only final subject marks.",
+    "trend": {
+      "improving": "Improving",
+      "declining": "Declining",
+      "flat": "Flat",
+      "unknown": "Not enough data"
+    },
+    "ai": {
+      "title": "AI analysis",
+      "executiveSummary": "Executive summary",
+      "classPerformance": "Class performance",
+      "topStudents": "Top students",
+      "studentsNeedingAttention": "Students requiring attention",
+      "strongSubjects": "Strong subjects",
+      "weakSubjects": "Weak subjects",
+      "subjectInsights": "Subject insights",
+      "studentPerformanceInsights": "Student performance insights",
+      "termTrends": "Term trends",
+      "dataIntegrityNotes": "Data integrity notes",
+      "recommendations": "Recommendations"
+    }
+  },
+  "admin": {
+    "nav": {
+      "overview": "Overview",
+      "users": "Users",
+      "schools": "Schools",
+      "exams": "Exams",
+      "auditLogs": "Audit logs"
+    },
+    "accessDenied": "You don't have access to this page.",
+    "overview": {
+      "title": "Super Admin",
+      "subtitle": "Platform-wide statistics and management.",
+      "totalUsers": "Total users",
+      "activeUsers": "Active users",
+      "suspendedUsers": "Suspended users",
+      "totalSchools": "Total schools",
+      "totalStudents": "Total students",
+      "totalExams": "Total exams",
+      "totalReports": "Total reports",
+      "aiRequests": "AI requests",
+      "emailsSent": "Emails sent"
+    },
+    "users": {
+      "title": "Users",
+      "subtitle": "View and manage every account on the platform.",
+      "searchPlaceholder": "Search by name or email…",
+      "table": {
+        "name": "Name",
+        "email": "Email",
+        "school": "School",
+        "role": "Role",
+        "status": "Status",
+        "registered": "Registered",
+        "lastActive": "Last active",
+        "exams": "Exams",
+        "reports": "Reports",
+        "aiUsage": "AI usage",
+        "actions": "Actions"
+      },
+      "status": {
+        "active": "Active",
+        "suspended": "Suspended",
+        "deactivated": "Deactivated"
+      },
+      "actions": {
+        "activate": "Activate",
+        "deactivate": "Deactivate",
+        "suspend": "Suspend",
+        "reactivate": "Reactivate"
+      },
+      "never": "Never",
+      "clickToConfirm": "Click to confirm",
+      "noSchool": "—",
+      "empty": "No users found.",
+      "confirmSuspend": "Suspend this user? They'll be signed out and unable to sign back in until reactivated.",
+      "confirmDeactivate": "Deactivate this user? They'll be signed out and unable to sign back in until reactivated.",
+      "confirmReactivate": "Reactivate this user? They'll be able to sign in again."
+    },
+    "auditLogs": {
+      "title": "Audit logs",
+      "subtitle": "A record of every critical platform action.",
+      "table": {
+        "time": "Time",
+        "actor": "Actor",
+        "action": "Action",
+        "target": "Target",
+        "school": "School",
+        "details": "Details"
+      },
+      "empty": "No audit log entries yet."
+    },
+    "schools": {
+      "title": "Schools",
+      "subtitle": "Every school registered on the platform.",
+      "table": {
+        "name": "Name",
+        "owner": "Owner",
+        "contact": "Contact",
+        "registered": "Registered",
+        "students": "Students",
+        "exams": "Exams",
+        "reports": "Reports",
+        "aiUsage": "AI usage"
+      },
+      "empty": "No schools found."
+    },
+    "exams": {
+      "title": "Exams",
+      "subtitle": "Every exam uploaded across the platform.",
+      "table": {
+        "title": "Exam",
+        "school": "School",
+        "class": "Class",
+        "date": "Date",
+        "status": "Status",
+        "students": "Students",
+        "subjects": "Subjects",
+        "reports": "Reports",
+        "aiUsage": "AI usage"
+      },
+      "status": {
+        "uploaded": "Uploaded",
+        "analyzed": "Analyzed",
+        "failed": "Failed"
+      },
+      "empty": "No exams found."
+    }
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "meta": {
+    "title": "Grade AI — Nidaamka Falanqaynta Imtixaanka ee AI",
+    "description": "Soo geli natiijooyinka imtixaanka, hel falanqayn degdeg ah, oo AI weydii wax ku saabsan waxqabadka dugsigaaga."
+  },
+  "nav": {
+    "home": "Bogga hore",
+    "signIn": "Gal",
+    "getStarted": "Bilow",
+    "dashboard": "Dashboard-ka"
+  },
+  "theme": {
+    "light": "Iftiinka",
+    "dark": "Madoowga",
+    "system": "Nidaamka",
+    "toggle": "Bedel muuqaalka"
+  },
+  "language": {
+    "label": "Luqadda"
+  },
+  "home": {
+    "badge": "Falanqaynta imtixaanka ee AI-ga",
+    "title": "Fahan natiijooyinka imtixaanka dugsigaaga daqiiqado gudahood, ma aha maalmo",
+    "subtitle": "Soo geli xaashida Excel ee natiijooyinka, Grade AI wuu hubinayaa, xisaabinayaa tirakoob kasta, oo qori warbixin cad — Ingiriisi, Soomaali, ama Carabi.",
+    "ctaPrimary": "Bilow",
+    "ctaSecondary": "Gal",
+    "featuresTitle": "Wax kasta oo dugsi uga baahan yahay natiijooyinka imtixaanka",
+    "features": {
+      "excel": {
+        "title": "Soo gelinta Excel",
+        "description": "Soo geli natiijooyinka .xlsx, .xls, ama .csv. Saf kasta waa la hubiyaa ka hor inta aan wax la kaydin — buundooyinka waligood si qarsoodi ah looma bedelo."
+      },
+      "analysis": {
+        "title": "Falanqayn toos ah",
+        "description": "Wadarta, celceliska, darajooyinka, heerka guusha — waxaa xisaabiya database-ka, ma aha AI oo qiyaasaysa."
+      },
+      "aiReports": {
+        "title": "Warbixino uu qoro AI",
+        "description": "Soo koobid guud, talooyin, iyo fikrado laga soo saaray xogtaada la hubiyay, oo lagu soo dejin karo PDF."
+      },
+      "assistant": {
+        "title": "Kaaliyaha AI",
+        "description": "Weydii \"waa kuwee 10-ka ardayda ugu sareeya?\" ama \"warbixin u samee Ahmed Ali\" oo hel jawaab ku salaysan xogta dhabta ah ee dugsigaaga."
+      },
+      "languages": {
+        "title": "Ingiriisi, Soomaali, Carabi",
+        "description": "Warbixin kasta iyo interface-ka oo dhan waxay ku shaqeeyaan saddexda luqadood, oo si buuxda u taageeraya qoraalka Carabiga ee midig-ilaa-bidix."
+      },
+      "security": {
+        "title": "Xogtaadu adigaa iska leh",
+        "description": "Amniga heer-safka (Row-Level Security) wuxuu hubinayaa in dugsi uusan waligiis arki karin ardayda, imtixaannada, ama warbixinaha dugsi kale."
+      }
+    }
+  },
+  "footer": {
+    "rights": "Dhammaan xuquuqda way dhowran yihiin."
+  },
+  "auth": {
+    "fullNameLabel": "Magaca oo buuxa",
+    "emailLabel": "Ciwaanka iimaylka",
+    "passwordLabel": "Furaha sirta ah",
+    "passwordHint": "Ugu yaraan 8 xaraf.",
+    "newPasswordLabel": "Furaha sirta ah ee cusub",
+    "showPassword": "Tus furaha sirta ah",
+    "hidePassword": "Qari furaha sirta ah",
+    "register": {
+      "title": "Samee akoonkaaga",
+      "subtitle": "Bilow falanqaynta natiijooyinka imtixaanka dugsigaaga daqiiqado gudahood.",
+      "submit": "Samee akoon",
+      "submitPending": "Akoon la samaynayaa…",
+      "haveAccount": "Akoon horey ma u lahayd?",
+      "signInLink": "Gal",
+      "checkEmailTitle": "Fiiri iimaylkaaga",
+      "checkEmailBody": "Waxaan u dirnay iimaylkaaga xiriir xaqiijin ah. Guji si aad u hawlgaliso akoonkaaga."
+    },
+    "login": {
+      "title": "Ku soo dhawoow mar kale",
+      "subtitle": "Gal akoonkaaga Grade AI.",
+      "submit": "Gal",
+      "submitPending": "Waa la gelayaa…",
+      "forgotPassword": "Furahaaga sirta ah ma illowday?",
+      "noAccount": "Akoon ma lihid?",
+      "registerLink": "Samee mid"
+    },
+    "forgotPassword": {
+      "title": "Dib u dejinta furahaaga sirta ah",
+      "subtitle": "Geli iimaylkaaga waxaanan kuu soo dirin doonaa xiriir dib-u-dejin.",
+      "submit": "Soo dir xiriirka dib-u-dejinta",
+      "submitPending": "Waa la dirayaa…",
+      "successTitle": "Fiiri iimaylkaaga",
+      "successBody": "Haddii akoon uu jiro ciwaankaas, xiriir dib-u-dejinta furaha sirta ah ayaa ku soo socda.",
+      "backToLogin": "Ku noqo galitaanka"
+    },
+    "resetPassword": {
+      "title": "Dooro furaha sirta ah ee cusub",
+      "subtitle": "Geli furaha sirta ah ee cusub ee akoonkaaga.",
+      "submit": "Cusboonaysii furaha sirta ah",
+      "submitPending": "Waa la cusboonaysiinayaa…",
+      "successTitle": "Furaha sirta ah waa la cusboonaysiiyay",
+      "successBody": "Furahaaga sirta ah si guul leh ayaa loo bedelay.",
+      "goToDashboard": "Aad dashboard-ka"
+    },
+    "signOut": "Ka bax",
+    "errors": {
+      "invalid_credentials": "Iimaylka ama furaha sirta ah waa khalad.",
+      "user_already_exists": "Akoon iimaylkan leh ayaa horey u jiray.",
+      "email_not_confirmed": "Fadlan xaqiiji ciwaankaaga iimaylka ka hor intaadan gelin.",
+      "weak_password": "Furaha sirta ah ma buuxinayo shuruudaha.",
+      "rate_limited": "Isku day badan. Fadlan mar kale isku day wax yar ka dib.",
+      "session_expired": "Fadhigaagu waa dhacay. Fadlan codso xiriir dib-u-dejin cusub.",
+      "duplicate": "Magacaas horey ayaa loo isticmaalay.",
+      "account_suspended": "Akoonkaaga waa la joojiyay ama waa la demiyay. La xiriir maamulahaaga si aad u hesho caawimaad.",
+      "unexpected": "Wax baa qaldamay. Fadlan mar kale isku day."
+    }
+  },
+  "onboarding": {
+    "title": "Sameyso dugsigaaga",
+    "subtitle": "Noo sheeg macluumaadka dugsigaaga si aad u bilowdo. Waad bedeli kartaa mar dambe.",
+    "nameLabel": "Magaca dugsiga",
+    "addressLabel": "Ciwaanka (ikhtiyaari)",
+    "phoneLabel": "Taleefanka (ikhtiyaari)",
+    "submit": "Samee dugsi",
+    "submitPending": "Waa la samaynayaa…"
+  },
+  "nav_sections": {
+    "dashboard": "Dashboard-ka",
+    "school": "Dugsiga",
+    "exams": "Imtixaannada",
+    "admin": "Maamulaha"
+  },
+  "school": {
+    "title": "Dejinta dugsiga",
+    "subtitle": "Maamul macluumaadka aasaasiga ah ee dugsigaaga.",
+    "nameLabel": "Magaca dugsiga",
+    "addressLabel": "Ciwaanka",
+    "phoneLabel": "Taleefanka",
+    "save": "Kaydi isbedelada",
+    "saving": "Waa la kaydinayaa…",
+    "saved": "Waa la kaydiyay."
+  },
+  "exams": {
+    "title": "Imtixaannada",
+    "subtitle": "Soo geli natiijooyinka imtixaanka oo arag warbixinaha toos ah.",
+    "uploadNew": "Soo geli imtixaan",
+    "studentsStat": "Ardayda",
+    "empty": "Wali ma jiraan imtixaanno. Soo geli faylkaaga ugu horeeya si aad u bilowdo.",
+    "delete": "Tirtir",
+    "confirmDelete": "Ma tirtirtaa imtixaankan iyo warbixintiisa?",
+    "status": {
+      "uploaded": "La soo geliyay",
+      "analyzed": "La falanqeeyay",
+      "failed": "Fashilmay"
+    }
+  },
+  "upload": {
+    "title": "Soo geli natiijooyinka imtixaanka",
+    "subtitle": "Soo geli fayl Excel ama CSV ah. Waxaan hubin doonaa saf kasta ka hor inta aan wax la kaydin.",
+    "examTitleLabel": "Cinwaanka imtixaanka",
+    "examTitlePlaceholder": "tusaale Imtixaanka Dhexe",
+    "classNameLabel": "Fasalka",
+    "classNamePlaceholder": "tusaale Grade 8",
+    "examDateLabel": "Taariikhda imtixaanka (ikhtiyaari)",
+    "maxMarkLabel": "Buundada ugu badan ee maado kasta",
+    "fileLabel": "Faylka natiijada (.xlsx, .xls, .csv)",
+    "fileHint": "Si otomaatig ah ayaan u helnaa safka cinwaannada xitaa haddii faylkaagu leeyahay cinwaan ama macluumaad xilliyeed sare ka yaal, waana fahamnaa tiirarka maado kasta ee CAT1/CAT2/Final/Total.",
+    "parse": "Hordhac faylka",
+    "parsing": "Faylka waa la akhrinayaa…",
+    "previewTitle": "Hordhac",
+    "previewSubtitle": "Wali wax lama kaydin — dib u eeg safafka hoose.",
+    "rowsWithErrors": "{count, plural, one {# saf ayaa u baahan hagaajin} other {# saf ayaa u baahan hagaajin}} ka hor inta aad kaydin karin. Hagaaji faylkaaga oo mar kale soo geli.",
+    "rowsOk": "Dhammaan {count, plural, one {# safka} other {# safafka}} way fiican yihiin.",
+    "chooseDifferentFile": "Dooro fayl kale",
+    "confirm": "Xaqiiji oo kaydi",
+    "confirming": "Waa la kaydinayaa…",
+    "colRow": "#",
+    "colStudentId": "Lambarka Ardayga",
+    "colStudentName": "Magaca Ardayga",
+    "fileErrors": {
+      "unreadable_file": "Faylkaas ma akhrin karno. Hubi inuu yahay fayl sax ah oo .xlsx, .xls, ama .csv ah.",
+      "no_rows": "Faylku ma laha wax saf xog ah.",
+      "ai_unavailable": "Falanqaynta AI lama dejin server-kan, marka faylasha hadda lama farsameyn karo.",
+      "ai_analysis_failed": "Ma aannu fahmin waxa ku jira faylkan. Hubi inuu ka kooban yahay magacyada ardayda iyo buundooyinka, kadibna mar kale isku day.",
+      "rows_omitted": "Falanqayntu kuma soo laaban dhammaan ardaydaada — tani waxay dhici kartaa faylasha aad u waaweyn. Fadlan mar kale isku day, ama faylka u qaybi qaybo yaryar."
+    },
+    "rowErrors": {
+      "missing_name": "Magaca ardayga waa maqan yahay",
+      "duplicate_student": "Arday la isku celceliyay faylkan"
+    },
+    "cellErrors": {
+      "invalid_mark": "Buundo aan sax ahayn",
+      "mark_above_max": "Way ka badan tahay buundada ugu badan"
+    },
+    "errors": {
+      "no_file": "Fadlan dooro fayl aad soo gelinayso.",
+      "invalid_file_type": "Fadlan soo geli fayl .xlsx, .xls, ama .csv ah.",
+      "file_too_large": "Faylkaasi aad buu u weyn yahay (ugu badnaan 8MB).",
+      "unexpected": "Wax baa qaldamay markii la kaydinayay. Fadlan mar kale isku day."
+    }
+  },
+  "report": {
+    "backToExams": "Ku noqo imtixaannada",
+    "summaryTitle": "Soo koobid",
+    "studentCount": "Ardayda",
+    "subjectCount": "Maadooyinka",
+    "classAverage": "Celceliska fasalka",
+    "passRate": "Heerka guusha",
+    "failRate": "Heerka dhicitaanka",
+    "subjectsTitle": "Faahfaahinta maadooyinka",
+    "subjectCol": "Maadada",
+    "averageCol": "Celceliska",
+    "highestCol": "Ugu sareeya",
+    "lowestCol": "Ugu hooseeya",
+    "passRateCol": "Heerka guusha",
+    "studentsTitle": "Darajooyinka ardayda",
+    "rankCol": "Darajada",
+    "nameCol": "Magaca",
+    "codeCol": "Lambarka",
+    "totalCol": "Wadarta",
+    "percentageCol": "%",
+    "gradeCol": "Fasalka",
+    "strongestCol": "Ugu xoogsan",
+    "weakestCol": "Ugu daciifsan",
+    "aiSummaryPending": "Soo koobid iyo talooyin uu qoro AI ayaa halkan ka muuqan doona marka isku xirka OpenAI la xiro.",
+    "notFound": "Warbixin lama helin.",
+    "downloadPdf": "Soo deji PDF",
+    "print": "Daabac",
+    "emailReport": "Mar kale iimayl u dir warbixinta",
+    "emailReportSent": "Iimaylka waa la diray",
+    "emailReportError": "Lama dirin — isku day mar kale",
+    "outOf": "{total} / {max}",
+    "dataIntegrityTitle": "Digniinaha xogta la waayay",
+    "dataIntegrityNone": "Buundo lama waayin — arday kasta wuxuu buundo u leeyahay maado kasta.",
+    "dataIntegrityMissing": "Ka maqan:",
+    "topPerformersTitle": "Ardayda ugu fiican",
+    "strugglingStudentsTitle": "Ardayda u baahan taageero",
+    "gradeDistributionTitle": "Qaybinta fasallada",
+    "termTrendsTitle": "Isbedelka xilliyada (CAT1 → CAT2 → Final)",
+    "noTermData": "Faylka imtixaankan ma lahayn tiirar gaar ah oo CAT1/CAT2/Final ah, sidaa darteed isbedel xilli-xilli ah lama heli karo — buundooyinka maadada oo kaliya ayaa la heli karaa.",
+    "trend": {
+      "improving": "Waa horumarayaa",
+      "declining": "Waa hoos u dhacayaa",
+      "flat": "Isku mid",
+      "unknown": "Xog kuma filna"
+    },
+    "ai": {
+      "title": "Falanqaynta AI",
+      "executiveSummary": "Soo koobid guud",
+      "classPerformance": "Waxqabadka fasalka",
+      "topStudents": "Ardayda ugu fiican",
+      "studentsNeedingAttention": "Ardayda u baahan taageero",
+      "strongSubjects": "Maadooyinka xooggan",
+      "weakSubjects": "Maadooyinka daciifka ah",
+      "subjectInsights": "Fikrado ku saabsan maadooyinka",
+      "studentPerformanceInsights": "Fikrado ku saabsan waxqabadka ardayda",
+      "termTrends": "Isbedelka xilliyada",
+      "dataIntegrityNotes": "Fiiro gaar ah oo xog ku saabsan",
+      "recommendations": "Talooyinka"
+    }
+  },
+  "admin": {
+    "nav": {
+      "overview": "Guudmarka",
+      "users": "Isticmaalayaasha",
+      "schools": "Dugsiyada",
+      "exams": "Imtixaannada",
+      "auditLogs": "Diiwaanka dhaqdhaqaaqa"
+    },
+    "accessDenied": "Ma haysatid ogolaansho boggan.",
+    "overview": {
+      "title": "Maamulaha Sare",
+      "subtitle": "Tirakoob iyo maareyn guud oo nidaamka.",
+      "totalUsers": "Wadarta isticmaalayaasha",
+      "activeUsers": "Isticmaalayaasha firfircoon",
+      "suspendedUsers": "Isticmaalayaasha la joojiyay",
+      "totalSchools": "Wadarta dugsiyada",
+      "totalStudents": "Wadarta ardayda",
+      "totalExams": "Wadarta imtixaannada",
+      "totalReports": "Wadarta warbixinnada",
+      "aiRequests": "Codsiyada AI-ga",
+      "emailsSent": "Iimaylada la diray"
+    },
+    "users": {
+      "title": "Isticmaalayaasha",
+      "subtitle": "Eeg oo maamul akoon kasta oo nidaamka ku jira.",
+      "searchPlaceholder": "Ku raadi magaca ama iimaylka…",
+      "table": {
+        "name": "Magaca",
+        "email": "Iimaylka",
+        "school": "Dugsiga",
+        "role": "Doorka",
+        "status": "Xaalada",
+        "registered": "Diiwaangashan",
+        "lastActive": "Firfircoonaanta ugu dambeysay",
+        "exams": "Imtixaannada",
+        "reports": "Warbixinnada",
+        "aiUsage": "Isticmaalka AI",
+        "actions": "Ficillada"
+      },
+      "status": {
+        "active": "Firfircoon",
+        "suspended": "La joojiyay",
+        "deactivated": "La demiyay"
+      },
+      "actions": {
+        "activate": "Firfircooni",
+        "deactivate": "Dami",
+        "suspend": "Joojin",
+        "reactivate": "Dib u firfircooni"
+      },
+      "never": "Waligeed",
+      "clickToConfirm": "Taabo si aad u xaqiijiso",
+      "noSchool": "—",
+      "empty": "Isticmaale lama helin.",
+      "confirmSuspend": "Isticmaalahan joojin? Waa la bixin doonaa oo ma geli karo ilaa dib loo firfircooniyo.",
+      "confirmDeactivate": "Isticmaalahan damin? Waa la bixin doonaa oo ma geli karo ilaa dib loo firfircooniyo.",
+      "confirmReactivate": "Isticmaalahan dib u firfircooni? Wuu geli kari doonaa mar labaad."
+    },
+    "auditLogs": {
+      "title": "Diiwaanka dhaqdhaqaaqa",
+      "subtitle": "Diiwaan ka kooban dhammaan ficillada muhiimka ah ee nidaamka.",
+      "table": {
+        "time": "Waqtiga",
+        "actor": "Sameeyaha",
+        "action": "Ficilka",
+        "target": "Bartilmaameedka",
+        "school": "Dugsiga",
+        "details": "Faahfaahin"
+      },
+      "empty": "Wali diiwaan dhaqdhaqaaq ah lama helin."
+    },
+    "schools": {
+      "title": "Dugsiyada",
+      "subtitle": "Dugsi kasta oo ka diiwaangashan nidaamka.",
+      "table": {
+        "name": "Magaca",
+        "owner": "Mulkiiliha",
+        "contact": "Xiriirka",
+        "registered": "Diiwaangashan",
+        "students": "Ardayda",
+        "exams": "Imtixaannada",
+        "reports": "Warbixinnada",
+        "aiUsage": "Isticmaalka AI"
+      },
+      "empty": "Dugsi lama helin."
+    },
+    "exams": {
+      "title": "Imtixaannada",
+      "subtitle": "Imtixaan kasta oo lagu soo geliyay nidaamka.",
+      "table": {
+        "title": "Imtixaanka",
+        "school": "Dugsiga",
+        "class": "Fasalka",
+        "date": "Taariikhda",
+        "status": "Xaalada",
+        "students": "Ardayda",
+        "subjects": "Maadooyinka",
+        "reports": "Warbixinnada",
+        "aiUsage": "Isticmaalka AI"
+      },
+      "status": {
+        "uploaded": "La geliyay",
+        "analyzed": "La falanqeeyay",
+        "failed": "Fashilmay"
+      },
+      "empty": "Imtixaan lama helin."
+    }
+  }
+}
