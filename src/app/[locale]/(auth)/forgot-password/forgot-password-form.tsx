@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { requestPasswordResetAction, type ActionState } from "../actions";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,7 +12,9 @@ const initialState: ActionState = { status: "idle" };
 
 export function ForgotPasswordForm() {
   const t = useTranslations("auth");
-  const [state, formAction] = useActionState(requestPasswordResetAction, initialState);
+  const locale = useLocale();
+  const boundAction = requestPasswordResetAction.bind(null, locale);
+  const [state, formAction] = useActionState(boundAction, initialState);
 
   if (state.status === "success") {
     return (

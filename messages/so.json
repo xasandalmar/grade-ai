@@ -53,7 +53,8 @@
     }
   },
   "footer": {
-    "rights": "Dhammaan xuquuqda way dhowran yihiin."
+    "rights": "Dhammaan xuquuqda way dhowran yihiin.",
+    "poweredBy": "Waxaa awoodda siiya Space Cloud"
   },
   "auth": {
     "fullNameLabel": "Magaca oo buuxa",
@@ -98,7 +99,11 @@
       "submitPending": "Waa la cusboonaysiinayaa…",
       "successTitle": "Furaha sirta ah waa la cusboonaysiiyay",
       "successBody": "Furahaaga sirta ah si guul leh ayaa loo bedelay.",
-      "goToDashboard": "Aad dashboard-ka"
+      "goToDashboard": "Aad dashboard-ka",
+      "checkingLink": "Waa la hubinayaa linkigaaga dib-u-dejinta…",
+      "invalidLinkTitle": "Linkigan waa khaldan yahay ama wuu dhacay",
+      "invalidLinkBody": "Linkiyada dib-u-dejinta furaha sirta ah hal mar ayay shaqeeyaan waxayna dhacaan 1 saac gudahood. Codso mid cusub si aad u sii wado.",
+      "requestNewLink": "Codso link cusub"
     },
     "signOut": "Ka bax",
     "errors": {

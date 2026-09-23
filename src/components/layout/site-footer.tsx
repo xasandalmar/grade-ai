@@ -10,6 +10,9 @@ export function SiteFooter() {
         <span>© {year} Grade AI</span>
         <span>{t("rights")}</span>
       </div>
+      <div className="border-t border-border/60 px-4 py-3 text-center text-xs text-muted-foreground sm:px-6 lg:px-8">
+        {t("poweredBy")}
+      </div>
     </footer>
   );
 }

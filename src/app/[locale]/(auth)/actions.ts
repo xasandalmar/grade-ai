@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { getOrigin } from "@/lib/get-origin";
+import { sendPasswordResetEmail } from "@/lib/email/send-password-reset-email";
 import {
   forgotPasswordSchema,
   loginSchema,
@@ -107,6 +108,7 @@ export async function signOutAction(locale: string) {
 }
 
 export async function requestPasswordResetAction(
+  locale: string,
   _prevState: ActionState,
   formData: FormData,
 ): Promise<ActionState> {
@@ -116,15 +118,27 @@ export async function requestPasswordResetAction(
     return { status: "error", fieldErrors: parsed.error.flatten().fieldErrors };
   }
 
-  const supabase = await createClient();
   const origin = await getOrigin();
 
-  const { error } = await supabase.auth.resetPasswordForEmail(parsed.data.email, {
-    redirectTo: `${origin}/auth/callback?next=/reset-password`,
-  });
+  // Sent via the app's own Resend pipeline rather than Supabase Auth's
+  // built-in mailer (supabase.auth.resetPasswordForEmail) — see
+  // send-password-reset-email.ts for why. Never reveals whether the address
+  // has an account either way.
+  //
+  // Points straight at /reset-password rather than /auth/callback: an
+  // admin-generated recovery link resolves to an implicit-flow redirect
+  // (session tokens in the URL's #hash fragment), which a server route
+  // handler can never see — only a client-side Supabase client on the
+  // landing page itself can consume it (see reset-password-form.tsx).
+  const result = await sendPasswordResetEmail(
+    parsed.data.email,
+    `${origin}/${locale}/reset-password`,
+    locale,
+  );
 
-  if (error) {
-    return { status: "error", message: toErrorCode(error.message) };
+  if (!result.ok) {
+    console.error("[requestPasswordResetAction] sendPasswordResetEmail failed:", result.error);
+    return { status: "error", message: "unexpected" };
   }
 
   return { status: "success" };

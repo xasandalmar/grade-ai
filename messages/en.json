@@ -53,7 +53,8 @@
     }
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "poweredBy": "Powered by Space Cloud"
   },
   "auth": {
     "fullNameLabel": "Full name",
@@ -98,7 +99,11 @@
       "submitPending": "Updating…",
       "successTitle": "Password updated",
       "successBody": "Your password has been changed successfully.",
-      "goToDashboard": "Go to dashboard"
+      "goToDashboard": "Go to dashboard",
+      "checkingLink": "Checking your reset link…",
+      "invalidLinkTitle": "This link is invalid or has expired",
+      "invalidLinkBody": "Password reset links only work once and expire after an hour. Request a new one to continue.",
+      "requestNewLink": "Request a new link"
     },
     "signOut": "Sign out",
     "errors": {
