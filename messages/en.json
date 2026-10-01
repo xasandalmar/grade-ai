@@ -105,6 +105,13 @@
       "invalidLinkBody": "Password reset links only work once and expire after an hour. Request a new one to continue.",
       "requestNewLink": "Request a new link"
     },
+    "pendingApproval": {
+      "pendingTitle": "Awaiting approval",
+      "pendingBody": "Your account is pending Super Admin approval. Please wait or contact support.",
+      "rejectedTitle": "Account not approved",
+      "rejectedBody": "Your account request was not approved. Please contact support if you believe this is a mistake.",
+      "signOut": "Sign out"
+    },
     "signOut": "Sign out",
     "errors": {
       "invalid_credentials": "Incorrect email or password.",
@@ -277,6 +284,7 @@
       "totalUsers": "Total users",
       "activeUsers": "Active users",
       "suspendedUsers": "Suspended users",
+      "pendingApprovals": "Pending approvals",
       "totalSchools": "Total schools",
       "totalStudents": "Total students",
       "totalExams": "Total exams",
@@ -294,6 +302,7 @@
         "school": "School",
         "role": "Role",
         "status": "Status",
+        "approval": "Approval",
         "registered": "Registered",
         "lastActive": "Last active",
         "exams": "Exams",
@@ -306,19 +315,29 @@
         "suspended": "Suspended",
         "deactivated": "Deactivated"
       },
+      "approvalStatus": {
+        "pending": "Pending",
+        "approved": "Approved",
+        "rejected": "Rejected"
+      },
       "actions": {
         "activate": "Activate",
         "deactivate": "Deactivate",
         "suspend": "Suspend",
-        "reactivate": "Reactivate"
+        "reactivate": "Reactivate",
+        "approve": "Approve",
+        "reject": "Reject"
       },
       "never": "Never",
       "clickToConfirm": "Click to confirm",
       "noSchool": "—",
       "empty": "No users found.",
+      "filterPendingApprovals": "Pending approvals",
       "confirmSuspend": "Suspend this user? They'll be signed out and unable to sign back in until reactivated.",
       "confirmDeactivate": "Deactivate this user? They'll be signed out and unable to sign back in until reactivated.",
-      "confirmReactivate": "Reactivate this user? They'll be able to sign in again."
+      "confirmReactivate": "Reactivate this user? They'll be able to sign in again.",
+      "confirmApprove": "Approve this user? They'll immediately gain access to the dashboard.",
+      "confirmReject": "Reject this user? They won't be able to access the dashboard."
     },
     "auditLogs": {
       "title": "Audit logs",

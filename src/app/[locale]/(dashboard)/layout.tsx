@@ -28,7 +28,7 @@ export default async function DashboardLayout({
 
   const { data: profile } = await supabase
     .from("profiles")
-    .select("full_name, email, school_id, role, status")
+    .select("full_name, email, school_id, role, status, approval_status")
     .eq("id", user.id)
     .single();
 
@@ -38,6 +38,12 @@ export default async function DashboardLayout({
   if (profile && profile.status !== "active") {
     await supabase.auth.signOut();
     redirect(`/${locale}/login?suspended=1`);
+  }
+
+  // A pending/rejected account never reaches the dashboard, regardless of
+  // school setup — the approval gate comes before onboarding.
+  if (profile && profile.approval_status !== "approved") {
+    redirect(`/${locale}/pending-approval`);
   }
 
   if (!profile?.school_id) {

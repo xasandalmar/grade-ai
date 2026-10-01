@@ -1,11 +1,15 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createClient } from "@/lib/supabase/server";
 import { UserStatusForm } from "@/components/admin/user-status-form";
+import { UserApprovalForm } from "@/components/admin/user-approval-form";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 
 const VALID_STATUS_FILTERS = ["active", "suspended", "deactivated"] as const;
 type StatusFilter = (typeof VALID_STATUS_FILTERS)[number];
+
+const VALID_APPROVAL_FILTERS = ["pending", "approved", "rejected"] as const;
+type ApprovalFilter = (typeof VALID_APPROVAL_FILTERS)[number];
 
 type UserRow = {
   id: string;
@@ -13,6 +17,7 @@ type UserRow = {
   email: string;
   role: "user" | "super_admin";
   status: "active" | "suspended" | "deactivated";
+  approval_status: "pending" | "approved" | "rejected";
   school_id: string | null;
   created_at: string;
   last_active_at: string | null;
@@ -32,12 +37,15 @@ export default async function AdminUsersPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ q?: string; status?: string }>;
+  searchParams: Promise<{ q?: string; status?: string; approval?: string }>;
 }) {
   const { locale } = await params;
-  const { q, status } = await searchParams;
+  const { q, status, approval } = await searchParams;
   const statusFilter = VALID_STATUS_FILTERS.includes(status as StatusFilter)
     ? (status as StatusFilter)
+    : null;
+  const approvalFilter = VALID_APPROVAL_FILTERS.includes(approval as ApprovalFilter)
+    ? (approval as ApprovalFilter)
     : null;
   setRequestLocale(locale as Locale);
   const t = await getTranslations("admin.users");
@@ -46,7 +54,9 @@ export default async function AdminUsersPage({
 
   let usersQuery = supabase
     .from("profiles")
-    .select("id, full_name, email, role, status, school_id, created_at, last_active_at")
+    .select(
+      "id, full_name, email, role, status, approval_status, school_id, created_at, last_active_at",
+    )
     .order("created_at", { ascending: false });
 
   if (q) {
@@ -54,6 +64,9 @@ export default async function AdminUsersPage({
   }
   if (statusFilter) {
     usersQuery = usersQuery.eq("status", statusFilter);
+  }
+  if (approvalFilter) {
+    usersQuery = usersQuery.eq("approval_status", approvalFilter);
   }
 
   const [{ data: users }, { data: schools }, { data: exams }, { data: reports }] =
@@ -89,6 +102,7 @@ export default async function AdminUsersPage({
 
       <form className="mt-6 flex flex-wrap items-center gap-3" method="get">
         {statusFilter && <input type="hidden" name="status" value={statusFilter} />}
+        {approvalFilter && <input type="hidden" name="approval" value={approvalFilter} />}
         <input
           type="text"
           name="q"
@@ -105,6 +119,23 @@ export default async function AdminUsersPage({
             <span aria-hidden>×</span>
           </Link>
         )}
+        {approvalFilter && (
+          <Link
+            href="/admin/users"
+            className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary/20"
+          >
+            {t(`approvalStatus.${approvalFilter}`)}
+            <span aria-hidden>×</span>
+          </Link>
+        )}
+        {!approvalFilter && (
+          <Link
+            href="/admin/users?approval=pending"
+            className="inline-flex items-center gap-1.5 rounded-full border border-amber-600/30 bg-amber-500/10 px-3 py-1.5 text-xs font-medium text-amber-600 hover:bg-amber-500/20 dark:text-amber-400"
+          >
+            {t("filterPendingApprovals")}
+          </Link>
+        )}
       </form>
 
       <div className="mt-6 overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
@@ -116,6 +147,7 @@ export default async function AdminUsersPage({
               <th className="px-4 py-3 font-medium">{t("table.school")}</th>
               <th className="px-4 py-3 font-medium">{t("table.role")}</th>
               <th className="px-4 py-3 font-medium">{t("table.status")}</th>
+              <th className="px-4 py-3 font-medium">{t("table.approval")}</th>
               <th className="px-4 py-3 font-medium">{t("table.registered")}</th>
               <th className="px-4 py-3 font-medium">{t("table.lastActive")}</th>
               <th className="px-4 py-3 font-medium">{t("table.exams")}</th>
@@ -127,7 +159,7 @@ export default async function AdminUsersPage({
           <tbody>
             {rows.length === 0 ? (
               <tr>
-                <td colSpan={11} className="px-4 py-8 text-center text-muted-foreground">
+                <td colSpan={12} className="px-4 py-8 text-center text-muted-foreground">
                   {t("empty")}
                 </td>
               </tr>
@@ -153,6 +185,19 @@ export default async function AdminUsersPage({
                       {t(`status.${u.status}`)}
                     </span>
                   </td>
+                  <td className="px-4 py-3">
+                    <span
+                      className={
+                        u.approval_status === "approved"
+                          ? "rounded-full bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-600 dark:text-emerald-400"
+                          : u.approval_status === "pending"
+                            ? "rounded-full bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-600 dark:text-amber-400"
+                            : "rounded-full bg-red-500/10 px-2 py-0.5 text-xs font-medium text-red-600 dark:text-red-400"
+                      }
+                    >
+                      {t(`approvalStatus.${u.approval_status}`)}
+                    </span>
+                  </td>
                   <td className="px-4 py-3 text-muted-foreground">
                     {formatDate(u.created_at, locale)}
                   </td>
@@ -173,6 +218,20 @@ export default async function AdminUsersPage({
                       <span className="text-xs text-muted-foreground">—</span>
                     ) : (
                       <div className="flex flex-wrap gap-2">
+                        {u.approval_status !== "approved" && (
+                          <UserApprovalForm
+                            userId={u.id}
+                            nextApprovalStatus="approved"
+                            label={t("actions.approve")}
+                          />
+                        )}
+                        {u.approval_status !== "rejected" && (
+                          <UserApprovalForm
+                            userId={u.id}
+                            nextApprovalStatus="rejected"
+                            label={t("actions.reject")}
+                          />
+                        )}
                         {u.status !== "active" && (
                           <UserStatusForm
                             userId={u.id}

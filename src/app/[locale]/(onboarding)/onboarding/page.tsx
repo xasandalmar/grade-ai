@@ -24,9 +24,15 @@ export default async function OnboardingPage({
 
   const { data: profile } = await supabase
     .from("profiles")
-    .select("school_id")
+    .select("school_id, approval_status")
     .eq("id", user.id)
     .single();
+
+  // A pending/rejected account can't set up a school before a super admin
+  // approves it — same gate the dashboard layout enforces.
+  if (profile && profile.approval_status !== "approved") {
+    redirect(`/${locale}/pending-approval`);
+  }
 
   if (profile?.school_id) {
     redirect(`/${locale}/dashboard`);

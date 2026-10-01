@@ -105,6 +105,13 @@
       "invalidLinkBody": "Linkiyada dib-u-dejinta furaha sirta ah hal mar ayay shaqeeyaan waxayna dhacaan 1 saac gudahood. Codso mid cusub si aad u sii wado.",
       "requestNewLink": "Codso link cusub"
     },
+    "pendingApproval": {
+      "pendingTitle": "Waa la sugayaa ansixinta",
+      "pendingBody": "Akoonkaagu wuxuu sugayaa in Super Admin-ku ansixiyo. Fadlan sug ama la xiriir taageerada.",
+      "rejectedTitle": "Akoonka lama ansixin",
+      "rejectedBody": "Codsigaaga akoonka lama ansixin. Fadlan la xiriir taageerada haddii aad aaminsan tahay in tani khalad tahay.",
+      "signOut": "Ka bax"
+    },
     "signOut": "Ka bax",
     "errors": {
       "invalid_credentials": "Iimaylka ama furaha sirta ah waa khalad.",
@@ -277,6 +284,7 @@
       "totalUsers": "Wadarta isticmaalayaasha",
       "activeUsers": "Isticmaalayaasha firfircoon",
       "suspendedUsers": "Isticmaalayaasha la joojiyay",
+      "pendingApprovals": "Ansiximo sugaya",
       "totalSchools": "Wadarta dugsiyada",
       "totalStudents": "Wadarta ardayda",
       "totalExams": "Wadarta imtixaannada",
@@ -294,6 +302,7 @@
         "school": "Dugsiga",
         "role": "Doorka",
         "status": "Xaalada",
+        "approval": "Ansixinta",
         "registered": "Diiwaangashan",
         "lastActive": "Firfircoonaanta ugu dambeysay",
         "exams": "Imtixaannada",
@@ -306,19 +315,29 @@
         "suspended": "La joojiyay",
         "deactivated": "La demiyay"
       },
+      "approvalStatus": {
+        "pending": "Sugaya",
+        "approved": "La ansixiyay",
+        "rejected": "La diiday"
+      },
       "actions": {
         "activate": "Firfircooni",
         "deactivate": "Dami",
         "suspend": "Joojin",
-        "reactivate": "Dib u firfircooni"
+        "reactivate": "Dib u firfircooni",
+        "approve": "Ansixi",
+        "reject": "Diid"
       },
       "never": "Waligeed",
       "clickToConfirm": "Taabo si aad u xaqiijiso",
       "noSchool": "—",
       "empty": "Isticmaale lama helin.",
+      "filterPendingApprovals": "Ansiximo sugaya",
       "confirmSuspend": "Isticmaalahan joojin? Waa la bixin doonaa oo ma geli karo ilaa dib loo firfircooniyo.",
       "confirmDeactivate": "Isticmaalahan damin? Waa la bixin doonaa oo ma geli karo ilaa dib loo firfircooniyo.",
-      "confirmReactivate": "Isticmaalahan dib u firfircooni? Wuu geli kari doonaa mar labaad."
+      "confirmReactivate": "Isticmaalahan dib u firfircooni? Wuu geli kari doonaa mar labaad.",
+      "confirmApprove": "Isticmaalahan ansixi? Isla markiiba wuxuu heli doonaa gelitaanka dashboard-ka.",
+      "confirmReject": "Isticmaalahan diid? Ma geli kari doono dashboard-ka."
     },
     "auditLogs": {
       "title": "Diiwaanka dhaqdhaqaaqa",

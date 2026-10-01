@@ -323,6 +323,7 @@ export type Database = {
       }
       profiles: {
         Row: {
+          approval_status: Database["public"]["Enums"]["user_approval_status"]
           created_at: string
           email: string
           full_name: string
@@ -333,6 +334,7 @@ export type Database = {
           status: Database["public"]["Enums"]["user_status"]
         }
         Insert: {
+          approval_status?: Database["public"]["Enums"]["user_approval_status"]
           created_at?: string
           email: string
           full_name?: string
@@ -343,6 +345,7 @@ export type Database = {
           status?: Database["public"]["Enums"]["user_status"]
         }
         Update: {
+          approval_status?: Database["public"]["Enums"]["user_approval_status"]
           created_at?: string
           email?: string
           full_name?: string
@@ -684,6 +687,7 @@ export type Database = {
       exam_status: "uploaded" | "analyzed" | "failed"
       report_status: "generated" | "failed"
       report_type: "exam" | "student"
+      user_approval_status: "pending" | "approved" | "rejected"
       user_role: "user" | "super_admin"
       user_status: "active" | "suspended" | "deactivated"
     }
@@ -816,6 +820,7 @@ export const Constants = {
       exam_status: ["uploaded", "analyzed", "failed"],
       report_status: ["generated", "failed"],
       report_type: ["exam", "student"],
+      user_approval_status: ["pending", "approved", "rejected"],
       user_role: ["user", "super_admin"],
       user_status: ["active", "suspended", "deactivated"],
     },

@@ -36,6 +36,7 @@ export default async function AdminOverviewPage({
     totalUsers,
     activeUsers,
     suspendedUsers,
+    pendingApprovals,
     totalSchools,
     totalStudents,
     totalExams,
@@ -52,6 +53,12 @@ export default async function AdminOverviewPage({
         .from("profiles")
         .select("*", { count: "exact", head: true })
         .eq("status", "suspended"),
+    ),
+    countRows(
+      supabase
+        .from("profiles")
+        .select("*", { count: "exact", head: true })
+        .eq("approval_status", "pending"),
     ),
     countRows(supabase.from("schools").select("*", { count: "exact", head: true })),
     countRows(supabase.from("exam_students").select("*", { count: "exact", head: true })),
@@ -81,6 +88,12 @@ export default async function AdminOverviewPage({
       icon: UserX,
       value: suspendedUsers,
       href: "/admin/users?status=suspended",
+    },
+    {
+      key: "pendingApprovals",
+      icon: UserCheck,
+      value: pendingApprovals,
+      href: "/admin/users?approval=pending",
     },
     { key: "totalSchools", icon: School, value: totalSchools, href: "/admin/schools" },
     { key: "totalStudents", icon: GraduationCap, value: totalStudents, href: "/admin/schools" },
